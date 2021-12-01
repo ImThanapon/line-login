@@ -25,6 +25,8 @@ function App() {
       } else {
         //เพิ่มแจ้งเตือน
         notify('hello')
+        liff.login();
+        
       }
     }, err => console.error(err));
   }
