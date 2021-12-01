@@ -24,7 +24,7 @@ function App() {
         runApp();
       } else {
         //เพิ่มแจ้งเตือน
-        notify('hello')
+        notify('hello');
         liff.login();
         
       }
