@@ -3,6 +3,7 @@ import './App.css';
 import liff from '@line/liff';
 import { useEffect, useState } from 'react';
 
+
 function App() {
 
   const [pictureUrl, setPictureUrl] = useState(logo);
@@ -10,6 +11,7 @@ function App() {
   const [displayName, setDisplayName] = useState("");
   const [statusMessage, setStatusMessage] = useState("");
   const [userId, setUserId] = useState("");
+  const {notify} = require('../src/notify');
 
   const logout = () => {
     liff.logout();
@@ -21,7 +23,8 @@ function App() {
       if (liff.isLoggedIn()) {
         runApp();
       } else {
-        liff.login();
+        //เพิ่มแจ้งเตือน
+        notify('hello')
       }
     }, err => console.error(err));
   }
@@ -43,6 +46,8 @@ function App() {
   }, []);
 
   return (
+
+    
     <div className="App">
       <header className="App-header">
       <div style={{ textAlign: "center" }}>
