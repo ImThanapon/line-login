@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import liff from '@line/liff';
 import { useEffect, useState } from 'react';
-
+const {notify} = require('../src/notify');
 
 function App() {
 
@@ -11,7 +11,7 @@ function App() {
   const [displayName, setDisplayName] = useState("");
   const [statusMessage, setStatusMessage] = useState("");
   const [userId, setUserId] = useState("");
-  const {notify} = require('../src/notify');
+  
 
   const logout = () => {
     liff.logout();
