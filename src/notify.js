@@ -5,7 +5,7 @@ exports.notify = (msg) => {
         url:'https://notify-api.line.me/api/notify',
         method: 'POST',
         auth: {
-            bearer:'u62hrJH1DeL1KO5ocEUp5ffG1HGr6cIIa3elprE3IRP'
+            bearer:'siBienXGu1UoR1WiPTxfTeXcBy1Khe9EMle2LRCAnP4'
         },
         form:{
             message: msg
